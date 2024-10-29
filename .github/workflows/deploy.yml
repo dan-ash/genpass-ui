@@ -24,6 +24,8 @@ jobs:
 
       - name: Build
         env:
+          VUE_APP_NAME: Password Generator
+          VUE_APP_DESCRIPTION: A secure password generator using various hash algorithms
           VITE_BASE_URL: '/genpass-ui/'
           NODE_ENV: production
         run: npm run build
