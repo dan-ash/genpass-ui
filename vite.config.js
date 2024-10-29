@@ -72,5 +72,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: '/genpass-ui/'  // Replace with your repo name
+  base: '/genpass-ui/',  // Replace with your actual repo name
+  build: {
+    outDir: 'dist',  // Explicitly set the output directory
+  }
 }) 
