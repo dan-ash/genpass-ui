@@ -15,6 +15,8 @@ export default defineConfig({
         short_name: 'PassGen',
         description: 'A secure password generator using various hash algorithms',
         theme_color: '#4f46e5',
+        start_url: '/genpass-ui/',
+        scope: '/genpass-ui/',
         icons: [
           {
             src: 'img/icons/icon-72x72.png',
