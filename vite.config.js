@@ -67,5 +67,6 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  base: '/genpass-ui/'  // Replace with your repo name
 }) 
