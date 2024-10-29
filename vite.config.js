@@ -64,7 +64,7 @@ export default defineConfig({
         cleanupOutdatedCaches: true,
         skipWaiting: true,
         clientsClaim: true,
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}', '../img/icons/*.png']
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}']
       },
       injectRegister: 'auto'
     })
