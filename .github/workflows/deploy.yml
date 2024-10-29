@@ -17,20 +17,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
 
       - name: Build
         run: npm run build
-
-      - name: List build output
-        run: |
-          echo "Build output contents:"
-          pwd
-          ls -la
-          ls -la public
-          ls -la public/dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
