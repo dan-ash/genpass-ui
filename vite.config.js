@@ -4,10 +4,12 @@ import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  root: 'public',
   plugins: [
     vue(),
     VitePWA({
       registerType: 'autoUpdate',
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
         name: 'Password Generator',
         short_name: 'PassGen',
@@ -59,8 +61,10 @@ export default defineConfig({
       workbox: {
         cleanupOutdatedCaches: true,
         skipWaiting: true,
-        clientsClaim: true
-      }
+        clientsClaim: true,
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}']
+      },
+      injectRegister: 'auto'
     })
   ],
   resolve: {
