@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/genpass-ui/sw.js', { scope: '/genpass-ui/' })})}
